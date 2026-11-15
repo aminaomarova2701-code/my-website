@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Батыру нужна помощь — сбор на трансплантацию</title>
+  <meta property="og:title" content="Батыру 5 лет. Помогите ему получить шанс на будущее">
+  <meta property="og:description" content="Сбор на трансплантацию в Нью-Дели. Цель: 35 600 $">
+  <meta property="og:image" content="photo.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><span class="heart">♥</span> Помогите Батыру</header>
+
+  <main class="card">
+    <div class="hero">
+      <img class="photo" src="docs/batyr.jpg" alt="Фото: Жарқынбек Батыр">
+      <div class="hero-text">
+        <span class="badge">Сбор на трансплантацию</span>
+        <h1>Помогите Батыру</h1>
+        <p>5-летнему Батыру необходима трансплантация в Нью-Дели</p>
+        <p class="name">Жарқынбек Батыр Арсенұлы · 07.10.2021</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stats-top">
+        <div>
+          <p class="raised-big">$<span id="raised">0</span></p>
+          <p class="stats-sub">на <span id="date"></span> собрано</p>
+        </div>
+        <div class="goal-side">
+          <p class="goal-label">цель</p>
+          <p class="goal-val">$<span id="goal">35 600</span></p>
+        </div>
+      </div>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"><div id="fill"></div></div>
+      <p class="pct">Собрано <span id="percent">0</span>% от цели</p>
+      <button class="cta" onclick="openModal()">Помочь Батыру</button>
+    </div>
+
+    <section>
+      <h2>Тяжёлое испытание для семьи</h2>
+      <p>Батыру всего пять лет. Он должен просыпаться по утрам и бежать играть, а вместо этого его семья каждый день борется за его здоровье.</p>
+      <p><b>Каждую ночь Батыр проходит диализ.</b> Вместо спокойного детского сна у него ежедневная процедура, которая поддерживает его, пока он ждёт трансплантацию.</p>
+      <p>Сегодня родители Батыра проходят через самое тяжёлое испытание в своей жизни. Их сын борется с серьёзными заболеваниями и нуждается в специализированном лечении.</p>
+      <p>Для родителей Батыр — целый мир. Их мечта проста: видеть, как сын растёт, улыбается и радуется каждому новому дню.</p>
+    </section>
+
+    <section class="diag">
+      <h2>Диагнозы Батыра</h2>
+      <p class="sub">Состояние требует постоянного лечения</p>
+      <ul>
+        <li>Хроническая почечная недостаточность 5-й стадии</li>
+        <li>Перитонеальный диализ</li>
+        <li>Артериальная гипертензия, высокий риск сердечно-сосудистых осложнений</li>
+        <li>Вторичный иммунодефицит</li>
+        <li>Вторичный гепатит</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Лечение в Индии</h2>
+      <p><b>Max Super Speciality Hospital, Saket</b><br>Нью-Дели, Индия</p>
+      <p>Согласно предварительному счёту клиники от 21 августа 2026 года, план лечения включает обследование, подготовку и трансплантацию.</p>
+      <table>
+        <tr><td>Обследование и подготовка</td><td>≈ $5 000</td></tr>
+        <tr><td>Трансплантация</td><td>≈ $30 600</td></tr>
+        <tr class="total"><td>Предварительная стоимость</td><td>$35 600</td></tr>
+      </table>
+    </section>
+
+    <section id="docs">
+      <h2>Документы</h2>
+      <p>Мы публикуем документы, чтобы каждый мог убедиться в подлинности сбора.</p>
+      <ul>
+        <li><a href="docs/IMG_9473.PNG">Предварительный счёт клиники от 21.08.2026</a></li>
+        <li><a href="docs/vypiska.pdf">Медицинская выписка</a></li>
+      </ul>
+    </section>
+
+    <section class="pay">
+      <p class="eyebrow">Помочь сейчас</p>
+      <h2>Реквизиты для перевода</h2>
+      <p class="sub">Каждый перевод, даже небольшой, приближает лечение.</p>
+      <div class="rows">
+        <div class="row"><div><p class="label">Способ оплаты</p><p class="val">Kaspi Gold</p></div></div>
+        <div class="row">
+          <div><p class="label">Номер карты</p><p class="val js-card"></p></div>
+          <button class="ico" data-copy="card" aria-label="Скопировать номер карты"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg></button>
+        </div>
+        <div class="row">
+          <div><p class="label">Номер телефона</p><p class="val js-phone"></p></div>
+          <button class="ico" data-copy="phone" aria-label="Скопировать телефон"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg></button>
+        </div>
+        <div class="row"><div><p class="label">Получатель</p><p class="val js-owner"></p></div></div>
+      </div>
+      <button class="copy kaspi-btn">Скопировать номер и открыть Kaspi</button>
+      <p class="kaspi-help">Kaspi не открылся? <a class="kaspi-link" href="https://kaspi.kz/" target="_blank" rel="noopener noreferrer">Нажмите сюда</a>. Номер карты скопируется ещё раз.</p>
+      <button class="copy alt docs-btn">Подтверждающие документы</button>
+      <p class="note">Пожалуйста, проверьте данные получателя перед переводом.</p>
+    </section>
+
+    <section class="closing">
+      <h2>Подарим Батыру шанс на будущее</h2>
+      <p>Любая посильная сумма, каждый репост и каждое доброе слово имеют значение. Если вы не можете помочь деньгами, поделитесь историей Батыра — иногда один репост доходит до того, кто сможет помочь.</p>
+      <div class="share">
+        <a id="wa" class="btn-light" href="#" target="_blank" rel="noopener">Поделиться в WhatsApp</a>
+        <button id="copyLink" class="btn-light">Скопировать ссылку</button>
+      </div>
+    </section>
+  </main>
+
+  <button class="help" id="openBtn">Помочь Батыру</button>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button class="close" id="closeBtn" aria-label="Закрыть">×</button>
+
+      <div id="step1">
+        <h2>Помогите Батыру</h2>
+        <p class="sub">Сумма пожертвования</p>
+        <div class="amounts" id="amounts">
+          <button class="amt" data-amt="1000">1 000 ₸</button>
+          <button class="amt" data-amt="2000">2 000 ₸</button>
+          <button class="amt active" data-amt="5000"><span class="pop">Популярное</span>5 000 ₸</button>
+          <button class="amt" data-amt="10000">10 000 ₸</button>
+        </div>
+        <input id="custom" class="custom" type="text" inputmode="numeric" placeholder="Своя сумма" autocomplete="off">
+        <button class="copy" id="goBtn">Помочь на 5 000 ₸</button>
+      </div>
+
+      <div id="step2" hidden>
+        <button class="back" id="backBtn">‹ Назад</button>
+        <h2>Реквизиты для перевода</h2>
+        <p class="sub">Скопируйте номер карты и сделайте перевод в Kaspi или другом банке.</p>
+        <p class="sum">Сумма перевода: <b id="sumShow"></b></p>
+
+        <div class="rows">
+          <div class="row"><div><p class="label">Способ оплаты</p><p class="val">Kaspi Gold</p></div></div>
+          <div class="row">
+            <div><p class="label">Номер карты</p><p class="val js-card"></p></div>
+            <button class="ico" data-copy="card" aria-label="Скопировать номер карты">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+            </button>
+          </div>
+          <div class="row">
+            <div><p class="label">Номер телефона</p><p class="val js-phone"></p></div>
+            <button class="ico" data-copy="phone" aria-label="Скопировать телефон">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+            </button>
+          </div>
+          <div class="row"><div><p class="label">Получатель</p><p class="val js-owner"></p></div></div>
+        </div>
+
+        <button class="copy kaspi-btn">Скопировать номер и открыть Kaspi</button>
+        <button class="copy alt docs-btn">Подтверждающие документы</button>
+        <p class="note">Пожалуйста, проверьте данные получателя перед переводом.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

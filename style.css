@@ -1,0 +1,109 @@
+:root { --bg:#f6d6cf; --ink:#222; --red:#e8321f; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:"Montserrat",Arial,sans-serif; background:#fff; color:var(--ink); line-height:1.5; }
+.card { max-width:580px; margin:20px auto 110px; padding:28px 18px; background:var(--bg); border-radius:28px; text-align:center; }
+.tag { display:inline-block; background:#fff; padding:6px 14px; border-radius:20px; font-size:.85rem; margin:0; }
+h1 { font-size:clamp(2rem,9vw,2.8rem); line-height:1.1; margin:14px 0 10px; }
+.lead { font-size:1.1rem; margin:0 0 20px; }
+.photo { width:100%; border:3px solid var(--ink); border-radius:28px; display:block; aspect-ratio:3/4; object-fit:cover; background:#ddd; }
+.goalbox { background:#fff; border:2px solid var(--ink); border-radius:24px; padding:16px; margin:18px 0; }
+.goalbox p { margin:4px 0; }
+.small { font-size:.95rem; }
+.goal { font-size:clamp(2.2rem,11vw,3.4rem); font-weight:800; }
+.bar { height:16px; background:#eee; border-radius:8px; overflow:hidden; margin:10px 0; }
+#fill { height:100%; width:0; background:var(--red); transition:width .8s ease; }
+section { text-align:left; background:#fff; border-radius:20px; padding:18px; margin-top:18px; }
+section h2 { margin:0 0 10px; font-size:1.25rem; }
+section p { margin:0 0 12px; }
+table { width:100%; border-collapse:collapse; }
+td { padding:10px 4px; border-bottom:1px solid #eee; }
+td:last-child { text-align:right; white-space:nowrap; }
+.total td { font-weight:800; border-bottom:0; }
+ul { padding-left:20px; margin:0; }
+a { color:var(--red); }
+.closing { background:#fff3f0; border:2px solid var(--red); }
+.share { display:flex; gap:10px; flex-wrap:wrap; }
+.btn-light { flex:1 1 200px; text-align:center; padding:14px; border:2px solid var(--red); border-radius:14px; background:#fff; color:var(--red); font:inherit; font-weight:700; text-decoration:none; cursor:pointer; }
+.help { position:fixed; left:50%; bottom:20px; transform:translateX(-50%); width:min(92%,540px); padding:20px; border:0; border-radius:40px; background:var(--red); color:#fff; font-size:1.2rem; font-weight:700; cursor:pointer; box-shadow:0 6px 20px rgba(0,0,0,.25); }
+button:focus-visible, a:focus-visible { outline:3px solid var(--ink); outline-offset:3px; }
+.modal { position:fixed; inset:0; background:rgba(0,0,0,.55); display:flex; align-items:center; justify-content:center; padding:16px; overflow:auto; }
+.modal[hidden] { display:none; }
+.modal-box { position:relative; background:#fff; border-radius:24px; padding:32px 20px 24px; max-width:460px; width:100%; text-align:center; }
+.close { position:absolute; top:8px; right:14px; border:0; background:none; font-size:2rem; cursor:pointer; }
+.label { margin:14px 0 2px; font-size:.85rem; color:#666; }
+.num { font-size:clamp(1.4rem,7vw,2rem); letter-spacing:.04em; margin:4px 0 10px; font-weight:600; }
+.phone { font-size:1.4rem; margin:4px 0 10px; }
+.owner { font-weight:700; font-size:1.15rem; margin:16px 0 4px; }
+.copy { width:100%; padding:14px; border:0; border-radius:14px; background:var(--red); color:#fff; font:inherit; font-weight:700; cursor:pointer; }
+.copy.alt { background:#fff; color:var(--red); border:2px solid var(--red); }
+.note { font-size:.85rem; margin-top:12px; }
+.diag .sub { font-weight:700; color:var(--red); }
+.diag ul { list-style:none; padding:0; }
+.diag li { padding:10px 12px 10px 14px; margin-bottom:8px; background:#fff3f0; border-left:4px solid var(--red); border-radius:8px; }
+
+/* ===== окно пожертвования ===== */
+.modal-box { text-align:left; max-height:92vh; overflow:auto; }
+.modal-box h2 { margin:0 0 4px; font-size:1.4rem; }
+.sub { margin:0 0 14px; color:#666; font-size:.95rem; }
+.amounts { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:10px; }
+.amt { position:relative; padding:20px 8px; border:2px solid #ead9cf; border-radius:16px; background:#fff; font:inherit; font-size:1.15rem; font-weight:700; cursor:pointer; }
+.amt.active { background:var(--red); border-color:var(--red); color:#fff; }
+.pop { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:#ffc107; color:#222; font-size:.7rem; padding:2px 10px; border-radius:10px; white-space:nowrap; font-weight:600; }
+.custom { width:100%; padding:18px; border:2px solid #ead9cf; border-radius:16px; font:inherit; font-size:1.1rem; margin-bottom:14px; }
+.custom:focus { outline:3px solid var(--ink); outline-offset:2px; }
+.back { border:0; background:none; font:inherit; color:#666; cursor:pointer; padding:0; margin-bottom:8px; }
+.sum { background:#fff3f0; border-radius:12px; padding:10px 14px; margin:0 0 12px; }
+.rows { border:1px solid #ead9cf; border-radius:18px; margin-bottom:14px; }
+.row { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 16px; border-bottom:1px solid #ead9cf; }
+.row:last-child { border-bottom:0; }
+.row .label { margin:0; font-size:.75rem; text-transform:uppercase; letter-spacing:.04em; color:#777; }
+.row .val { margin:2px 0 0; font-size:1.15rem; font-weight:700; }
+.ico { flex:none; width:44px; height:44px; border:1px solid #ead9cf; border-radius:10px; background:#fdeee8; color:var(--red); cursor:pointer; display:flex; align-items:center; justify-content:center; }
+.ico.done { background:var(--red); color:#fff; }
+.modal-box .copy { margin-bottom:10px; }
+
+/* ===== блок реквизитов на странице ===== */
+.eyebrow { margin:0 0 6px; color:var(--red); font-weight:700; text-transform:uppercase; letter-spacing:.04em; font-size:.85rem; }
+.pay .copy { margin-bottom:10px; }
+.toast { position:fixed; left:50%; bottom:110px; transform:translateX(-50%); width:min(92%,520px); background:#222; color:#fff; padding:14px 18px; border-radius:14px; font-size:.95rem; z-index:50; box-shadow:0 6px 20px rgba(0,0,0,.3); }
+.toast[hidden] { display:none; }
+
+/* ===== отступы кнопок ===== */
+.copy { display:block; }
+.copy + .copy { margin-top:10px; }
+.note { margin-top:14px; }
+
+/* ===== новый верх страницы ===== */
+body { background:#f7f3ef; }
+.card { background:transparent; padding:0; margin:0 auto 110px; border-radius:0; text-align:left; max-width:580px; }
+.card > section { margin-left:12px; margin-right:12px; box-shadow:0 2px 12px rgba(0,0,0,.05); }
+
+.topbar { max-width:580px; margin:0 auto; padding:14px 18px; display:flex; align-items:center; gap:10px; font-weight:700; font-size:1.15rem; }
+.topbar .heart { color:var(--red); font-size:1.5rem; line-height:1; }
+
+.hero { position:relative; overflow:hidden; }
+.hero .photo { width:100%; aspect-ratio:4/5; object-fit:cover; border:0; border-radius:0; display:block; background:#cfc6c2; }
+.hero::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.5) 35%, rgba(0,0,0,0) 65%); }
+.hero-text { position:absolute; left:0; right:0; bottom:0; padding:22px 20px 44px; color:#fff; z-index:2; }
+.hero-text p { margin:0; color:#f0f0f0; font-size:1.05rem; }
+.hero-text .name { margin-top:8px; font-size:.9rem; opacity:.85; }
+.hero h1 { font-size:clamp(2rem,9vw,2.8rem); line-height:1.1; margin:12px 0 8px; color:#fff; }
+.badge { display:inline-block; background:var(--red); color:#fff; font-weight:700; font-size:.85rem; letter-spacing:.04em; text-transform:uppercase; padding:8px 16px; border-radius:20px; }
+
+.stats { position:relative; z-index:3; background:#fff; border-radius:26px; margin:-26px 12px 0; padding:22px 20px; box-shadow:0 8px 30px rgba(0,0,0,.12); }
+.stats p { margin:0; }
+.stats-top { display:flex; justify-content:space-between; align-items:flex-end; gap:10px; }
+.raised-big { font-size:clamp(1.8rem,9vw,2.6rem); font-weight:800; line-height:1.1; }
+.stats-sub { margin-top:4px !important; color:#666; font-size:.95rem; }
+.goal-side { text-align:right; }
+.goal-label { color:#666; }
+.goal-val { font-size:1.3rem; font-weight:800; }
+.stats .bar { margin:16px 0 8px; height:14px; background:#f3e6e2; }
+.pct { color:var(--red); font-weight:700; margin-bottom:16px !important; }
+.cta { width:100%; padding:18px; border:0; border-radius:40px; background:var(--red); color:#fff; font:inherit; font-size:1.15rem; font-weight:700; cursor:pointer; box-shadow:0 6px 16px rgba(232,50,31,.3); }
+
+.modal { z-index:100; }
+.toast { z-index:200; }
+.kaspi-help { font-size:.9rem; color:#666; margin:0 0 12px; }
+
+.help { z-index:20; }
