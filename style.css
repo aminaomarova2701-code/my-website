@@ -107,3 +107,8 @@ body { background:#f7f3ef; }
 .kaspi-help { font-size:.9rem; color:#666; margin:0 0 12px; }
 
 .help { z-index:20; }
+
+
+.story-photo { margin:0 0 14px; }
+.story-photo img { width:100%; border-radius:16px; display:block; }
+.story-photo figcaption { font-size:.85rem; color:#666; margin-top:6px; }
