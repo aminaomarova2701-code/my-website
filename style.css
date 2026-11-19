@@ -112,3 +112,21 @@ body { background:#f7f3ef; }
 .story-photo { margin:0 0 14px; }
 .story-photo img { width:100%; border-radius:16px; display:block; }
 .story-photo figcaption { font-size:.85rem; color:#666; margin-top:6px; }
+
+
+/* ===== новость о доноре ===== */
+.news { border:2px solid var(--red); }
+.news h2 { text-transform:uppercase; font-size:1.3rem; line-height:1.4; margin:6px 0 16px; letter-spacing:.01em; text-wrap:balance; }
+.news .eyebrow { margin-bottom:8px; }
+@media (min-width:560px) {
+  .news h2 { white-space:nowrap; font-size:1rem; }
+}
+.story-photo { margin:0 0 14px; }
+.story-photo img { width:100%; border-radius:16px; display:block; }
+
+/* ===== прозрачность сбора ===== */
+.trust h2 { font-size:1.3rem; line-height:1.2; margin-bottom:10px; }
+.ig-btn { display:block; text-align:center; background:var(--red); color:#fff !important; font-weight:700; padding:16px 22px; border-radius:14px; text-decoration:none; margin:6px 0 16px; }
+.trust-item { display:flex; gap:14px; align-items:flex-start; padding:14px 0; border-top:1px solid #ead9cf; }
+.trust-item p { margin:4px 0 0; color:#555; }
+.tick { flex:none; width:40px; height:40px; border-radius:12px; background:#fdeee8; color:var(--red); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.1rem; }

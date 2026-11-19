@@ -126,7 +126,7 @@ function openKaspi() {
 }
 
 const cardRaw = () => DATA.card.replace(/\s/g, "");
-const phoneRaw = () => DATA.phone.replace(/[^\d+]/g, "");
+const phoneRaw = () => DATA.phone.replace(/\D/g, "").replace(/^7/, "8");
 
 document.querySelectorAll(".ico").forEach(b => {
   b.onclick = async () => {
@@ -139,16 +139,16 @@ document.querySelectorAll(".ico").forEach(b => {
 document.querySelectorAll(".kaspi-btn").forEach(b => {
   const label = b.textContent;
   b.onclick = () => {
-    copySync(cardRaw());
+    copySync(phoneRaw());
     b.textContent = "Скопировано ✓";
     setTimeout(() => b.textContent = label, 2500);
-    toast("Номер карты скопирован. Вставьте его в Kaspi в разделе «Переводы».");
+    toast("Номер телефона скопирован. Вставьте его в Kaspi в разделе «Переводы».");
     openKaspi();
   };
 });
 
 document.querySelectorAll(".kaspi-link").forEach(a => {
-  a.addEventListener("click", () => copySync(cardRaw()));
+  a.addEventListener("click", () => copySync(phoneRaw()));
 });
 
 document.querySelectorAll(".docs-btn").forEach(b => {
